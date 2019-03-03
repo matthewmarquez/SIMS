@@ -1,0 +1,14 @@
+<h1>Lounge Page</h1>
+
+<p>Lounge: {{ lounge.lounge_name }}</p>
+<p>Funds Allocated: ${{ lounge.lounge_funds}}</p>
+<p>Funds Used: ${{ funds_used }}</p>
+<p>Funds Remaining: ${{ funds_remaining }}</p>
+
+<p><a href="{% url 'simslounge:proposalform' lounge.id %}">New Proposal</a></p>
+
+<h2>Proposals</h2>
+
+{% for proposal in proposals %}
+    <p><a href="{% url 'simslounge:voteform' proposal.id %}">{{ proposal.proposal_name }}</a></p>
+{% endfor %}

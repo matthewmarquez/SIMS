@@ -1,1 +1,1 @@
-simsgit
+This is an attempt at making a new DB (resident system) for Simmons Hall at MIT. We're calling it SIMS (Simmons' Instrument for Managing Sims).

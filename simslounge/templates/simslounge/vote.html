@@ -1,0 +1,12 @@
+<h1>Proposal Voting Page</h1>
+<p>Proposal: {{ proposal.proposal_name }}</p>
+<p>Proposal Description: {{ proposal.proposal_description }}</p>
+<p>Do you approve of this proposal? Your selection below is your official vote and cannot be changed.</p>
+<form action="{% url 'simslounge:vote' proposal.id %}" method="post">
+{% csrf_token %}
+    <input type="radio" name="vote" id="yes" value="Yes">
+    <label for="yes">Yes</label><br>
+    <input type="radio" name="vote" id="no" value="No">
+    <label for="no">No</label><br>
+<input type="submit" value="Vote">
+</form>

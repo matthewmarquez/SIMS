@@ -1,0 +1,7 @@
+Hello, {{ user.first_name }}.
+
+<h1>Lounges</h1>
+
+{% for lounge in lounges %}
+    <a href="{% url 'simslounge:proposals' lounge.id %}">{{ lounge.lounge_name }}</a>
+{% endfor %}

@@ -1,0 +1,7 @@
+<h1>Login Page</h1>
+<form action="{% url 'simslounge:login' %}" method="post">
+{% csrf_token %}
+    Username: <input type="text" name="username" id="username">
+    Password: <input type="password" name="password" id="password">
+<input type="submit" value="Login">
+</form>

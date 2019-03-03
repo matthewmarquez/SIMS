@@ -1,0 +1,5 @@
+<h1>Proposals</h1>
+
+{% for proposal in proposals %}
+    <a href="{% url 'simslounge:voteform' proposal.id %}">{{ proposal.proposal_name }}</a>
+{% endfor %}

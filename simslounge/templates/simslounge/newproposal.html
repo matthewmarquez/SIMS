@@ -1,0 +1,13 @@
+<h1>Proposal Creation Page</h1>
+<form action="{% url 'simslounge:createproposal' lounge.id %}" method="post">
+{% csrf_token %}
+    <p>Proposal name: <input type="text" name="name"></p>
+    <p>Description:<input type="text" name="description"></p>
+    <p>Amount:<input type="text" name="amount"></p>
+    <p>ILEF:</p>
+    <input type="radio" name="ilef" id="yes" value="Yes">
+    <label for="yes">Yes</label><br>
+    <input type="radio" name="ilef" id="no" value="No">
+    <label for="no">No</label>
+<input type="submit" value="Submit">
+</form>
